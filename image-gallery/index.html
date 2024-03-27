@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1 id="image-title">Image1</h1>
+
+<ul>
+	<li><img src="images/image-1.jpg" title="image 1" onclick="imageGallery(this)"></li>
+	<li><img src="images/image-2.jpg" title="image 2" onclick="imageGallery(this)"></li>
+	<li><img src="images/image-3.jpg" title="image 3" onclick="imageGallery(this)"></li>
+	<li><img src="images/image-4.jpg" title="image 4" onclick="imageGallery(this)"></li>
+	<li><img src="images/image-5.jpg" title="image 5" onclick="imageGallery(this)"></li>
+	<li><img src="images/image-6.jpg" title="image 6" onclick="imageGallery(this)"></li>
+	<li><img src="images/image-7.jpg" title="image 7" onclick="imageGallery(this)"></li>
+	<li><img src="images/image-8.jpg" title="image 8" onclick="imageGallery(this)"></li>
+</ul>
+
+
+<script>
+	function imageGallery(currentImg){
+		var clickedImage=currentImg.src;
+		var clickedTitle=currentImg.title;
+		 document.body.style.backgroundImage=`url(${clickedImage})`;
+		 document.getElementById("image-title").innerText=clickedTitle;
+	}
+</script>
+
+</body>
+</html>
